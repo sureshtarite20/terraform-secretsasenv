@@ -11,3 +11,10 @@ jobs:
       - name: Use My Secret
         run: |
           echo ${{ secrets.MY_SECRET_KEY }}
+  my_job1:
+    runs-on: ubuntu-latest
+    environment: Test
+    steps:
+      - name: Use My Secret
+        run: |
+          echo ${{ secrets.CLIENT_SECRET }}

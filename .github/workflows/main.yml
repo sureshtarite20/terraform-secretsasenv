@@ -14,7 +14,8 @@ jobs:
   my_job1:
     runs-on: ubuntu-latest
     environment: Test
+    needs: my_job
     steps:
-      - name: Use My Secret
+      - name: Use Client Secret
         run: |
           echo ${{ secrets.CLIENT_SECRET }}
